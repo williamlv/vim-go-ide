@@ -38,6 +38,7 @@ centos编译安装vim并支持lua
     ./configure --prefix=/usr --with-features=huge --with-luajit --enable-luainterp=yes --enable-fail-if-missing --enable-pythoninterp=yes --enable-python3interp=yes
     make VIMRUNTIMEDIR=/usr/share/vim/vim80
     make install
+    
 至此，安装完成。
 
 ### 1. Install runtime:
