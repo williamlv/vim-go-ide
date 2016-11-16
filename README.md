@@ -9,36 +9,36 @@ Quite simply this is a vim configuration which will setup all the necessary Go d
 centos编译安装vim并支持lua
 系统环境：centos7 x64 （basic server）
 - 1.安装编译环境。
-
+```
     yum groupinstall "Development Tools"
-
+```
 - 2.安装vim编译依赖环境。
-
+```
     yum install git
     yum install lua-devel ncurses-devel
-
+```
 - 3.安装luagit。
-
+```
     wget http://luajit.org/download/LuaJIT-2.0.4.tar.gz
     tar -xzvf LuaJIT-2.0.4.tar.gz
     cd LuaJIT-2.0.4
     make
     make install
     ln -s /usr/local/lib/libluajit-5.1.so.2.0.4 /lib/libluajit-5.1.so.2
-
+```
 - 4.卸载系统自带vim。
-
+```
     rpm -qa | grep vim
     yum erase vim-enhanced vim-common vim-minimal
-    
+```    
 - 5.编译安装vim。
-
+```
     git clone https://github.com/vim/vim.git
     cd vim
     ./configure --prefix=/usr --with-features=huge --with-luajit --enable-luainterp=yes --enable-fail-if-missing --enable-pythoninterp=yes --enable-python3interp=yes
     make VIMRUNTIMEDIR=/usr/share/vim/vim80
     make install
-    
+```    
 至此，安装完成。
 
 ### 1. Install runtime:
