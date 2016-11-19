@@ -4,6 +4,8 @@
 
 " let's make sure we are in noncompatble mode
 set nocp
+let $VIMRUNTIME="/usr/share/vim/vim80"
+set runtimepath=~/.vim,/etc/vim,/usr/share/vim/vimfiles,/usr/share/vim/addons,/usr/share/vim/vim80,/usr/share/vim/vimfiles,/usr/share/vim/addons/after,~/.vim/after  
 
 " Sets how many lines of history VIM has to remember
 set history=700
